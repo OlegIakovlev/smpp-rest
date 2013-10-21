@@ -36,7 +36,9 @@ public class SMSMessage {
 
     @Override
     public String toString() {
-        return "SMSMessage [messageText=" + messageText + ", senderNumber=" + senderNumber + ", receiverNumbers=" + receiverNumbers + "]";
+        return new StringBuilder().append("SMSMessage [messageText=").append(messageText).
+                append(", senderNumber=").append(senderNumber).
+                append(", receiverNumbers=").append(receiverNumbers).append("]").toString();
     }
 
 
