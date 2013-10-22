@@ -1,4 +1,4 @@
-package com.bics.smpp.domain;
+package com.bics.smpp.domain.send;
 
 /**
  * Created with IntelliJ IDEA.
@@ -7,9 +7,18 @@ package com.bics.smpp.domain;
  * Time: 17:15
  * To change this template use File | Settings | File Templates.
  */
-public class SendSMSResponse {
+public class SingleSMSStatus {
+    private String recipient;
     private boolean success;
     private String message;
+
+    public String getRecipient() {
+        return recipient;
+    }
+
+    public void setRecipient(String recipient) {
+        this.recipient = recipient;
+    }
 
     public boolean isSuccess() {
         return success;
@@ -29,7 +38,8 @@ public class SendSMSResponse {
 
     @Override
     public String toString() {
-        return new StringBuilder().append("SendSMSResponse [success=").append(success).
+        return new StringBuilder().append("SingleSMSStatus [recipient=").append(recipient).
+                append(", success=").append(success).
                 append(", message=").append(message).append("]").toString();
     }
 }

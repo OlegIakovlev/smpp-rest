@@ -27,16 +27,16 @@
 
 		<h2>Submit new SMS message</h2>
 		<form id="newSmsForm">
-            <label for="senderNumber">Sender number: </label>
-            <input type="text" name="senderNumber" id="senderNumber" />
+            <label for="sender">Sender number: </label>
+            <input type="text" name="sender" id="sender" />
             <br/>
 
-            <label for="receiverNumbers">Receiver numbers: </label>
-            <input type="text" name="receiverNumbers" id="receiverNumbers" />
+            <label for="recipients">Receiver numbers: </label>
+            <input type="text" name="recipients" id="recipients" />
             <br/>
 
-            <label for="messageText">Message text: </label>
-			<input type="text" name="messageText" id="messageText" />
+            <label for="msg">Message text: </label>
+			<input type="text" name="msg" id="msg" />
 			<br/>
 
 			<input type="submit" value="Send SMS" /><br/><br/>

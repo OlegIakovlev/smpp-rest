@@ -1,8 +1,8 @@
 package com.bics.smpp.service;
 
-import com.bics.smpp.domain.SMSMessage;
-import com.bics.smpp.domain.SendSMSResponse;
+import com.bics.smpp.domain.send.SMSMessage;
+import com.bics.smpp.domain.send.SMSResponse;
 
 public interface SMSService {
-    public SendSMSResponse send(SMSMessage smsMessage);
+    public SMSResponse send(SMSMessage smsMessage);
 }

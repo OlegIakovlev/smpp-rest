@@ -1,7 +1,7 @@
 package com.bics.smpp.controller;
 
-import com.bics.smpp.domain.SMSMessage;
-import com.bics.smpp.domain.SendSMSResponse;
+import com.bics.smpp.domain.send.SMSMessage;
+import com.bics.smpp.domain.send.SMSResponse;
 import com.bics.smpp.service.SMSService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -30,8 +30,8 @@ public class SMPPController {
      */
     @RequestMapping(value = "sendSMS", method = RequestMethod.POST)
     @ResponseBody
-    public SendSMSResponse savePerson(SMSMessage smsMessage, @RequestHeader(value = "Version", required = false) String version) {
-        SendSMSResponse sendResponse = smsService.send(smsMessage);
+    public SMSResponse savePerson(SMSMessage smsMessage, @RequestHeader(value = "Version", required = false) String version) {
+        SMSResponse sendResponse = smsService.send(smsMessage);
         System.out.println(sendResponse);
         return sendResponse;
     }
