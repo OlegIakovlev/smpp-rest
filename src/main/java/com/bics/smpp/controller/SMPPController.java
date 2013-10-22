@@ -30,7 +30,8 @@ public class SMPPController {
      */
     @RequestMapping(value = "sendSMS", method = RequestMethod.POST)
     @ResponseBody
-    public SMSResponse savePerson(SMSMessage smsMessage, @RequestHeader(value = "Version", required = false) String version) {
+    public SMSResponse savePerson(SMSMessage smsMessage, @RequestHeader(value = "Service-Version", required = false) String version) {
+        System.out.println(smsMessage);
         SMSResponse sendResponse = smsService.send(smsMessage);
         System.out.println(sendResponse);
         return sendResponse;
